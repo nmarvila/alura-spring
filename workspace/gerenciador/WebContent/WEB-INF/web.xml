@@ -15,4 +15,10 @@
     <servlet-name>NovaEmpresaServlet</servlet-name>
     <servlet-class>br.com.alura.gerenciador.servlet.NovaEmpresaServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description></description>
+    <display-name>ListaEmpresasServlet</display-name>
+    <servlet-name>ListaEmpresasServlet</servlet-name>
+    <servlet-class>br.com.alura.gerenciador.servlet.ListaEmpresasServlet</servlet-class>
+  </servlet>
 </web-app>
