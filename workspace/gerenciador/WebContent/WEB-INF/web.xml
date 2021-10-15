@@ -10,7 +10,7 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-    <description></description>
+  	<description></description>
     <display-name>NovaEmpresaServlet</display-name>
     <servlet-name>NovaEmpresaServlet</servlet-name>
     <servlet-class>br.com.alura.gerenciador.servlet.NovaEmpresaServlet</servlet-class>
