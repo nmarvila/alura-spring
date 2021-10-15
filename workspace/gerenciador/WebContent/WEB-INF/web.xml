@@ -10,7 +10,7 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-  	<description></description>
+    <description></description>
     <display-name>NovaEmpresaServlet</display-name>
     <servlet-name>NovaEmpresaServlet</servlet-name>
     <servlet-class>br.com.alura.gerenciador.servlet.NovaEmpresaServlet</servlet-class>
@@ -20,5 +20,23 @@
     <display-name>ListaEmpresasServlet</display-name>
     <servlet-name>ListaEmpresasServlet</servlet-name>
     <servlet-class>br.com.alura.gerenciador.servlet.ListaEmpresasServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description></description>
+    <display-name>RemoveEmpresaServlet</display-name>
+    <servlet-name>RemoveEmpresaServlet</servlet-name>
+    <servlet-class>br.com.alura.gerenciador.servlet.RemoveEmpresaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description></description>
+    <display-name>MostraEmpresaServlet</display-name>
+    <servlet-name>MostraEmpresaServlet</servlet-name>
+    <servlet-class>br.com.alura.gerenciador.servlet.MostraEmpresaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description></description>
+    <display-name>AlteraEmpresaServlet</display-name>
+    <servlet-name>AlteraEmpresaServlet</servlet-name>
+    <servlet-class>br.com.alura.gerenciador.servlet.AlteraEmpresaServlet</servlet-class>
   </servlet>
 </web-app>
