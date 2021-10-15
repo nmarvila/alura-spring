@@ -9,8 +9,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 //oi
-@WebServlet(urlPatterns="/oi")
+//@WebServlet(urlPatterns="/oi")
 public class OiMundoServlet extends HttpServlet {
+	
+	public OiMundoServlet() {
+		System.out.println("Criando Oi Mundo Servlet");
+	}
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
