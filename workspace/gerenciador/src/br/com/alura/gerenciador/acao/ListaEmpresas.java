@@ -8,10 +8,16 @@ import br.com.alura.gerenciador.modelo.Empresa;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 public class ListaEmpresas implements Acao {
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession sessao = request.getSession();
+		if(sessao.getAttribute("usuarioLogado") == null) {
+			return "redirect:entrada?acao=LoginForm";
+		}
 		
 		System.out.println("listando empresa");
 		
