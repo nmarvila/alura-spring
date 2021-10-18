@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.5">
   <display-name>gerenciador</display-name>
   <welcome-file-list>
     <welcome-file>bem-vindo.html</welcome-file>
@@ -12,32 +12,28 @@
     <servlet-name>OiMundoServlet</servlet-name>
     <url-pattern>/ola</url-pattern>
   </servlet-mapping>
-  
   <filter>
-  	<filter-name>MF</filter-name>
-  	<filter-class>br.com.alura.gerenciador.servlet.MonitoramentoFilter</filter-class>
+    <filter-name>MF</filter-name>
+    <filter-class>br.com.alura.gerenciador.servlet.MonitoramentoFilter</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>MF</filter-name>
-  	<url-pattern>/entrada</url-pattern>
+    <filter-name>MF</filter-name>
+    <url-pattern>/entrada</url-pattern>
   </filter-mapping>
-  
   <filter>
-  	<filter-name>AF</filter-name>
-  	<filter-class>br.com.alura.gerenciador.servlet.AutorizacaoFilter</filter-class>
+    <filter-name>AF</filter-name>
+    <filter-class>br.com.alura.gerenciador.servlet.AutorizacaoFilter</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>AF</filter-name>
-  	<url-pattern>/entrada</url-pattern>
+    <filter-name>AF</filter-name>
+    <url-pattern>/entrada</url-pattern>
   </filter-mapping>
-  
   <filter>
-  	<filter-name>CF</filter-name>
-  	<filter-class>br.com.alura.gerenciador.servlet.ControladorFilter</filter-class>
+    <filter-name>CF</filter-name>
+    <filter-class>br.com.alura.gerenciador.servlet.ControladorFilter</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>CF</filter-name>
-  	<url-pattern>/entrada</url-pattern>
+    <filter-name>CF</filter-name>
+    <url-pattern>/entrada</url-pattern>
   </filter-mapping>
-
 </web-app>
