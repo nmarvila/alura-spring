@@ -15,7 +15,7 @@ public class TestaListagemDeCategorias {
 
 		try (Connection connection = new ConnectionFactory().recuperarConexao()) {
 			CategoriaDAO categoriaDao = new CategoriaDAO(connection);
-			List<Categoria> listaDeCategorias = categoriaDao.listaComProdutos();
+			List<Categoria> listaDeCategorias = categoriaDao.listaComProduto();
 			listaDeCategorias.stream().forEach(ct -> {
 				System.out.println(ct.getNome());
 				for (Produto produto : ct.getProdutos()) {

@@ -40,14 +40,15 @@ public class CategoriaDAO {
 		return categorias;
 	}
 
-	public List<Categoria> listaComProdutos() throws SQLException {
+	public List<Categoria> listaComProduto() throws SQLException {
 		Categoria ultima = null;
 		List<Categoria> categorias = new ArrayList<>();
 		
 		System.out.println("Executando a query de listar categoria");
 		
-		String sql = "SELECT C.ID, C.NOME, P.ID, P.NOME, P.DESCRICAO FROM CATEGORIA C INNER JOIN"
-				+ " PRODUTO P ON C.ID = P.CATEGORIA_ID";
+		String sql = "SELECT C.ID, C.NOME, P.ID, P.NOME, P.DESCRICAO"
+				+ " FROM CATEGORIA C "
+				+ "INNER JOIN PRODUTO P ON C.ID = P.CATEGORIA_ID";
 		
 		try(PreparedStatement pstm = connection.prepareStatement(sql)) {
 			pstm.execute();
@@ -60,8 +61,8 @@ public class CategoriaDAO {
 						ultima = categoria;
 						categorias.add(categoria);
 					}
-					Produto produto
-					= new Produto(rst.getInt(3), rst.getString(4), rst.getString(5));
+					Produto produto = new Produto(rst.getInt(3),
+							rst.getString(4), rst.getString(5));
 					ultima.adicionar(produto);
 				}
 			}
