@@ -44,7 +44,7 @@ public class SpringDataApplication implements CommandLineRunner {
 			System.out.println("0 - Sair");
 			System.out.println("1 - Cargo");
 			System.out.println("2 - Funcionario");
-			System.out.println("3 - Unidade Trabalho");
+			System.out.println("3 - Unidade");
 			System.out.println("4 - Relatorios");
 			
 			int action = scanner.nextInt();
